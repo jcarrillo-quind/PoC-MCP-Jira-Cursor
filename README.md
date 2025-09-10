@@ -75,3 +75,31 @@ app.post("/jira-webhook", async (req, res) => {
 app.listen(3000, () => {
   console.log("🚀 MCP corriendo en http://localhost:3000");
 });
+```
+## Integraciones clave
+
+### Jira
+
+Configura un webhook apuntando a:
+http://localhost:3000/jira-webhook
+
+### MCP
+
+Procesa el ticket y genera el prompt adecuado.
+
+### Cursor
+
+Recibe el prompt, genera código y lo guarda en el repo.
+
+(Opcional)
+
+MCP usa GitHub/GitLab API para crear Pull Requests automáticamente.
+
+📌 Beneficios
+
+🚀 Automatización de scaffolding de código desde Jira.
+
+🔗 Trazabilidad: cada ticket genera su propio branch y código base.
+
+⚡ Reducción de tareas repetitivas: Cursor escribe esqueletos, el equipo ajusta lógica de negocio.
+
